@@ -7,9 +7,9 @@
 </svelte:head>
 <main>
 	<div>
-		<h1>Welcome Stranger 👋</h1>
+		<h1>Sahil Mulani ✨</h1>
 		<p id="intro">
-			I'm <span id="name">Sahil Mulani</span>, a Software Developer curious about computer science
+			I'm a Software Developer curious about computer science
 			and related fields. I enjoy creating clean, minimal apps that solve real problems.
 		</p>
 	</div>
@@ -27,8 +27,5 @@
     }
 	#intro {
 		line-height: 1.7;
-	}
-	#name {
-		text-decoration: wavy;
 	}
 </style>
