@@ -16,7 +16,6 @@
 		align-items: start;
 		padding: 0px 20px;
 	}
-
 	#content {
 		width: 100%;
 		max-width: 800px;
