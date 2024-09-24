@@ -140,7 +140,6 @@
 		width: 100%;
 		border: 3px solid #262626;
 		border-radius: 5px;
-		opacity: 0.8;
 	}
 	ul {
 		list-style-position: outside;
