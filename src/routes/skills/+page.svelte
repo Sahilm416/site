@@ -106,6 +106,7 @@
 		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		gap: 10px;
+        padding: 20px 0px;
 	}
 	.framework-1 {
 		grid-row: span 2; /* Takes up both rows (full height) */
