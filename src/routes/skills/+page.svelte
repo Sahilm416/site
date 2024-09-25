@@ -12,6 +12,12 @@
 		{ title: 'React', logo: '/logos/react.png' },
 		{ title: 'Svelte', logo: '/logos/svelte.png' }
 	];
+
+	const databases = [
+		{ title: 'PostgreSQL', logo: '/logos/postgres.png' },
+		{ title: 'Redis', logo: '/logos/redis.png' },
+		{ title: 'Vector', logo: '/logos/vector.png' }
+	];
 </script>
 
 <main>
@@ -32,6 +38,14 @@
 			<div class={`framework framework-${i + 1}`}>
 				<img src={framework.logo} alt="logo" />
 				<h2>{framework.title}</h2>
+			</div>
+		{/each}
+	</div>
+	<h2 class="title">Databases</h2>
+	<div class="databases">
+		{#each databases as db, i}
+			<div class="db">
+				<h3><span class="index">{i + 1}.</span>&nbsp;{db.title}</h3>
 			</div>
 		{/each}
 	</div>
@@ -106,7 +120,7 @@
 		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		gap: 10px;
-        padding: 20px 0px;
+		padding: 20px 0px;
 	}
 	.framework-1 {
 		grid-row: span 2; /* Takes up both rows (full height) */
@@ -144,10 +158,16 @@
 		filter: blur(0px);
 	}
 
-	@media (width <= 600) {
-		.frameworks {
-			display: flex;
-			flex-direction: column;
-		}
+	/*
+      Databases CSS starts here
+    */
+    .databases{
+        padding: 20px 0px;
+    }
+	.index {
+		color: #757474;
+	}
+	.db {
+		width: 100%;
 	}
 </style>
