@@ -18,6 +18,8 @@
 		{ title: 'Redis', logo: '/logos/redis.png' },
 		{ title: 'Vector', logo: '/logos/vector.png' }
 	];
+
+	const other = ['Git-Github', 'TailwindCSS', 'Cloudflare', 'Serverless', 'Bundlers', 'Firebase'];
 </script>
 
 <main>
@@ -47,6 +49,14 @@
 			<div class="db">
 				<h3><span class="index">{i + 1}.</span>&nbsp;{db.title}</h3>
 			</div>
+		{/each}
+	</div>
+	<h2 class="title">Other Tools</h2>
+	<div class="other">
+		{#each other as skill, i}
+	         <div>
+				 <h4>{skill}</h4>
+			 </div>
 		{/each}
 	</div>
 </main>
@@ -161,13 +171,29 @@
 	/*
       Databases CSS starts here
     */
-    .databases{
-        padding: 20px 0px;
-    }
+	.databases {
+		padding: 20px 0px;
+	}
 	.index {
 		color: #757474;
 	}
 	.db {
 		width: 100%;
+	}
+
+	.other {
+		padding: 20px 0px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		border-bottom: 1px solid #262626;
+	}
+	.other > div {
+		display: flex;
+		align-items: center;
+		padding: 5px 20px;
+		border: 1px solid #262626;
+		border-radius: 5px;
+		height: 40px;
 	}
 </style>
