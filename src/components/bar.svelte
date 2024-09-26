@@ -2,7 +2,6 @@
 	const links: { name: string; url: string }[] = [
 		{ name: 'Projects', url: '/' },
 		{ name: 'Skills', url: '/skills' },
-		{ name: 'Blogs', url: '/blogs' },
 		{ name: 'Music', url: '/music' },
 		{ name: 'Movies', url: '/movies' }
 	];
