@@ -1,21 +1,31 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	const links: { name: string; url: string }[] = [
 		{ name: 'Projects', url: '/' },
 		{ name: 'Skills', url: '/skills' },
 		{ name: 'Music', url: '/music' },
 		{ name: 'Movies', url: '/movies' }
 	];
+
+	let path = '';
+
+	onMount(() => {
+		path = window.location.pathname;
+	});
 </script>
 
 <nav>
 	<div class="container">
-<div id="panel">
-		{#each links as link}
-			<a href={link.url}>{link.name}</a>
-		{/each}
+		<div id="panel">
+			{#each links as link}
+				<a
+					on:click={() => (path = link.url)}
+					style={`${path === link.url && 'background-color: #262626;'}`}
+					href={link.url}>{link.name}</a
+				>
+			{/each}
+		</div>
 	</div>
-	</div>
-	
 </nav>
 
 <style>
@@ -40,7 +50,7 @@
 		text-align: center;
 		cursor: pointer;
 		background-color: noen;
-		transition: all 0.3s ease-in;
+		transition: all 0.2s ease-in;
 		border-radius: 5px;
 	}
 
