@@ -1,5 +1,5 @@
 <footer>
-	<p>Built with 💜 by <a target="_blank" href="https://x.com/Sahil___501">sahil</a>.</p>
+	<p>Built with 💜 by <a target="_blank" href="https://x.com/Sahil__501">sahil</a>.</p>
 </footer>
 
 <style>
