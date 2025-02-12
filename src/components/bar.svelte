@@ -37,7 +37,6 @@
 	#panel {
 		padding: 10px;
 		display: flex;
-		justify-content: space-between;
 		gap: 20px;
 		list-style-type: none;
 		border: 1px solid #262626;

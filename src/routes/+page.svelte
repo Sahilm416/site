@@ -6,16 +6,11 @@
 				'RedShield is a authentication as a service platform where developers can setup auth in minutes',
 
 			tags: ['Auth', 'SaaS', 'DevTools'],
-			bullet_points: [
-				'Servereless redis as database',
-				'NPM package for UI and methods',
-				'User management dashboard',
-				'Built for NEXT JS apps (server actions)'
-			],
+
 			link: 'https://redshield.vercel.app/',
 			github: 'https://github.com/sahilm416/redshield',
 			image: '/redshield.png',
-			tech_stack: ['NEXT JS', 'Upstash redis', 'NPM', 'TSUP', 'ShadCn', 'NodeMailer']
+			tech_stack: ['NEXT JS', 'Upstash redis', 'NPM', 'TSUP', 'NodeMailer']
 		},
 
 		{
@@ -23,25 +18,17 @@
 			description:
 				'Find-X is a local AI based search engine for web applications with so much information.',
 			tags: ['RAG', 'AI', 'DevTools'],
-			bullet_points: [
-				'Headless scraper for data collection',
-				'Desktop application for central control',
-				'Cloudflare worker to serve requests',
-				'Efficient retrival with vector database',
-				'Support for REACT and NEXT JS apps'
-			],
+
 			link: 'https://www.find-x.tech/',
 			github: 'https://github.com/find-x-ai',
-			image: '/findx.png',
+			image: '/fx.png',
 			tech_stack: [
 				'PostgreSQL',
 				'Upstash redis',
 				'Modal Cloud',
-				'Tauri',
 				'Upstash vector',
 				'NEXT JS',
-				'LLAMA-3.1',
-				'Tailwind'
+				'LLAMA-3.1'
 			]
 		},
 		{
@@ -49,16 +36,10 @@
 			description:
 				'Project Anjum is a successor of the RedShield project that provides a more simple and developer friendly experience.',
 			tags: ['Auth', 'Docs', 'DevTools'],
-			bullet_points: [
-				'Support for neonDB postgres',
-				'Automated setup with NPX executable',
-				'Built for NEXT JS',
-				'Clean documentation'
-			],
 			link: 'https://anjum.vercel.app/',
 			github: 'https://github.com/sahilm416/anjum',
 			image: '/anjum.png',
-			tech_stack: ['Fuma docs', 'NPM', 'TSUP', 'JWT', 'NodeMailer']
+			tech_stack: ['Fuma docs', 'NPM', 'TSUP', 'NodeMailer']
 		}
 	];
 </script>
@@ -76,11 +57,6 @@
 				</div>
 				<!-- svelte-ignore a11y-missing-attribute -->
 				<div><img src={project.image} /></div>
-				<ul>
-					{#each project.bullet_points as point}
-						<li>{point}.</li>
-					{/each}
-				</ul>
 			</div>
 			<div>
 				<h4>Links</h4>
@@ -140,9 +116,6 @@
 		width: 100%;
 		border: 3px solid #262626;
 		border-radius: 5px;
-	}
-	ul {
-		list-style-position: outside;
 	}
 	.project {
 		line-height: 1.5;

@@ -3,7 +3,7 @@
 		{ title: 'Javascript', logo: '/logos/js.png' },
 		{ title: 'Typescript', logo: '/logos/typescript.png' },
 		{ title: 'CPP', logo: '/logos/cpp.jpg' },
-		{ title: 'Rust', logo: '/logos/rust_lang.png' },
+		// { title: 'Rust', logo: '/logos/rust_lang.png' },
 		{ title: 'Python', logo: '/logos/python.png' }
 	];
 
@@ -19,7 +19,7 @@
 		{ title: 'Vector', logo: '/logos/vector.png' }
 	];
 
-	const other = ['Git-Github', 'TailwindCSS', 'Cloudflare', 'Serverless', 'Bundlers', 'Firebase'];
+	const other = ['Git-Github', 'TailwindCSS', 'Cloudflare', 'Bundlers', 'Firebase'];
 </script>
 
 <main>
