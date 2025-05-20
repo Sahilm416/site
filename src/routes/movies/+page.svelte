@@ -1,1 +1,0 @@
-<h3>Movies Page</h3>
