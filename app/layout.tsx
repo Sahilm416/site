@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div className="flex w-full h-screen max-w-6xl mx-auto">
           <Sidebar />
-          <div className="p-5 w-full pt-36">{children}</div>
+          <div className="p-5 w-full md:pt-36">{children}</div>
           <Aside />
         </div>
       </body>

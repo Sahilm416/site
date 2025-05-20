@@ -23,18 +23,23 @@ const mainLinks: Link[] = [
   },
 ];
 
-const additionalLinks: Link[] = [];
+const additionalLinks: Link[] = [
+  {
+    name: "Gallery",
+    href: "/gallery",
+  },
+];
 
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-    <div className="h-full min-w-50 px-5 pt-36">
-      <motion.div
-        initial={{ filter: "blur(5px)" }}
-        animate={{ filter: "blur(0px)" }}
-        transition={{ duration: 0.3 }}
-        className="flex flex-col gap-2"
-      >
+    <motion.div
+      initial={{ filter: "blur(5px)" }}
+      animate={{ filter: "blur(0px)" }}
+      transition={{ duration: 0.3 }}
+      className="h-full min-w-50 px-5 pt-36 hidden md:block"
+    >
+      <div className="flex flex-col gap-2">
         {mainLinks.map((link) => (
           <Link
             prefetch
@@ -49,7 +54,7 @@ export default function Sidebar() {
             {link.name}
           </Link>
         ))}
-      </motion.div>
+      </div>
 
       <hr className="my-3 border-1 max-w-20 flex-0" />
 
@@ -69,6 +74,6 @@ export default function Sidebar() {
           </Link>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

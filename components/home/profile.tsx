@@ -1,5 +1,5 @@
 "use client";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,7 @@ const Icons = {
   github: Github,
   linkedin: Linkedin,
   twitter: Twitter,
+  mail: Mail,
 };
 
 type SocialLink = {
@@ -33,6 +34,11 @@ const socialLinks: SocialLink[] = [
     href: "https://twitter.com/sahil_501",
     icon: "twitter",
   },
+  {
+    name: "Mail",
+    href: "mailto:sahilmulani501@gmail.com",
+    icon: "mail",
+  },
 ];
 export default function Profile() {
   return (
@@ -41,18 +47,18 @@ export default function Profile() {
       animate={{ filter: "blur(0px)" }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex gap-5">
+      <div className="flex flex-col md:flex-row gap-5">
         <Image
           src="https://github.com/sahilm416.png"
           alt="Profile"
           width={150}
           height={150}
-          className="rounded-sm"
+          className="rounded-sm w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] bg-muted"
         />
         <div className="flex flex-col gap-3">
-          <h1 className="text-4xl font-semibold">Sahil Mulani</h1>
+          <h1 className="md:text-4xl text-2xl font-semibold">Sahil Mulani</h1>
           <p className="text-muted-foreground">
-            Hey there, I'm a software engineer with a passion for building
+            Hey there, I&apos;m a software engineer with a passion for building
             scalable and efficient systems.
           </p>
           <div className="flex gap-3">
