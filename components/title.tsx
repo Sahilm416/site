@@ -9,8 +9,8 @@ export const Title = ({
 }) => {
   return (
     <motion.div
-      initial={{ filter: "blur(5px)" }}
-      animate={{ filter: "blur(0px)" }}
+      initial={{ filter: "blur(5px)", opacity: 0 }}
+      animate={{ filter: "blur(0px)", opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="flex flex-col gap-2"
     >

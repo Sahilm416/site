@@ -43,8 +43,8 @@ const socialLinks: SocialLink[] = [
 export default function Profile() {
   return (
     <motion.div
-      initial={{ filter: "blur(5px)" }}
-      animate={{ filter: "blur(0px)" }}
+      initial={{ filter: "blur(5px)", opacity: 0 }}
+      animate={{ filter: "blur(0px)", opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="flex flex-col md:flex-row gap-5">
@@ -59,7 +59,7 @@ export default function Profile() {
           <h1 className="md:text-4xl text-2xl font-semibold">Sahil Mulani</h1>
           <p className="text-muted-foreground">
             Hey there, I&apos;m a software engineer with a passion for building
-            scalable and efficient systems.
+            minimalistic and efficient AI applications.
           </p>
           <div className="flex gap-3">
             {socialLinks.map((socialLink) => {

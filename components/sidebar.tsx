@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { Zap } from "lucide-react";
+import { ChangeTheme } from "@/components/change-theme";
 
 type Link = {
   name: string;
@@ -37,9 +39,10 @@ export default function Sidebar() {
       initial={{ filter: "blur(5px)" }}
       animate={{ filter: "blur(0px)" }}
       transition={{ duration: 0.3 }}
-      className="h-full min-w-50 px-5 pt-36 hidden md:block"
+      className="h-full min-w-50 px-5 pt-36 hidden md:block relative"
     >
       <div className="flex flex-col gap-2">
+        <Zap className="w-4 h-4 fill-primary" />
         {mainLinks.map((link) => (
           <Link
             prefetch
@@ -73,6 +76,9 @@ export default function Sidebar() {
             {link.name}
           </Link>
         ))}
+      </div>
+      <div className="mt-auto absolute bottom-0 left-0 py-5">
+        <ChangeTheme />
       </div>
     </motion.div>
   );
