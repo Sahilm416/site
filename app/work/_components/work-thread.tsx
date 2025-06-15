@@ -1,9 +1,13 @@
-import { Link } from "lucide-react";
+import { Link, Plus } from "lucide-react";
+import sourcicleLogo from "@/public/work/sourcicle.png";
+import studychatLogo from "@/public/work/logo-white.svg";
+import Image from "next/image";
 
 const work = [
   {
     id: 1,
     name: "Sourcicle",
+    logo: sourcicleLogo,
     description: "Founding Engineer",
     period: "June 2024 – Present",
     details: [
@@ -16,6 +20,7 @@ const work = [
   {
     id: 2,
     name: "Sourcicle",
+    logo: sourcicleLogo,
     description: "Software Development Engineer Intern",
     period: "Apr 2025 – May 2025",
     details: [
@@ -29,6 +34,7 @@ const work = [
   {
     id: 3,
     name: "StudyChat",
+    logo: studychatLogo,
     description: "Software Development Engineer Intern",
     period: "Oct 2024 – May 2025",
     details: [
@@ -44,19 +50,25 @@ export default function WorkThread() {
   return (
     <div className="relative">
       <div className="absolute left-0 top-0 w-1 h-full border-l-2 border-dashed border-[linear-gradient(to_bottom,transparent,transparent,black,black,black,transparent,transparent)] dark:border-[linear-gradient(to_bottom,transparent,transparent,white,white,white,transparent,transparent)] rounded-full" />
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 ">
         {work.map((item) => (
-          <div className="relative pl-8" key={item.id}>
-            <span
-              className={`absolute -left-2 top-0 w-4 h-4 rounded-full ${
-                item.id === 1 ? "bg-blue-500" : "bg-foreground/80"
-              }`}
+          <div
+            className="relative p-5 border-t-2 border-dashed last:border-b-2"
+            key={item.id}
+          >
+            <Plus
+              className={`absolute -left-3 -top-3 w-6 h-6 rounded-full border`}
             />
-            <div className="flex items-center gap-2 space-y-1">
-              <h2 className="text-lg font-medium">{item.name}</h2>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <Link className="w-4 h-4 text-muted-foreground hover:text-foreground" />
-              </a>
+            <div className="flex items-center gap-2">
+              <div className="bg-black p-1 rounded-md">
+                <Image src={item.logo} alt={item.name} width={20} height={20} />
+              </div>
+              <div className="flex items-center gap-2 space-y-1">
+                <h2 className="text-lg font-medium">{item.name}</h2>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <Link className="w-4 h-4 text-muted-foreground hover:text-foreground" />
+                </a>
+              </div>
             </div>
             <div className="flex flex-col gap-1">
               <p className="text-sm">{item.description}</p>
