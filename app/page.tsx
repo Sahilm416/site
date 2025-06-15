@@ -11,7 +11,7 @@ export default function Home() {
       className="flex flex-col gap-5"
     >
       <Profile />
-      <hr className="border-dashed border-1" />
+      <span className="border-dashed border-b-2" />
       <Interest />
     </motion.div>
   );

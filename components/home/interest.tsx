@@ -18,7 +18,7 @@ export default function Interest() {
     <div>
       {interests.map((interest, index) => (
         <div
-          className="flex flex-col gap-2 py-5 border-b border-dashed"
+          className="flex flex-col gap-2 py-5 border-b-2 border-dashed"
           key={interest.name}
         >
           <h2 className="text-2xl text-muted-foreground font-mono">
