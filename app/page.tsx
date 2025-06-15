@@ -1,10 +1,18 @@
+"use client";
 import Profile from "@/components/home/profile";
-
+import Interest from "@/components/home/interest";
+import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10">
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.7 }}
+      className="flex flex-col gap-5"
+    >
       <Profile />
-      <hr />
-    </div>
+      <hr className="border-dashed border-1" />
+      <Interest />
+    </motion.div>
   );
 }

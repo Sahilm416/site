@@ -29,7 +29,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-y-scroll`}
       >
         <ThemeProvider
           attribute="class"
@@ -37,9 +37,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex w-full h-screen max-w-6xl mx-auto">
+          <div className="flex w-full min-h-screen max-w-6xl mx-auto relative">
             <Sidebar />
-            <div className="p-5 w-full md:pt-36">{children}</div>
+            <div className="flex-1 p-5 md:pt-36 overflow-auto">{children}</div>
             <Aside />
           </div>
         </ThemeProvider>

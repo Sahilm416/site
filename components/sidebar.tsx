@@ -3,7 +3,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Zap } from "lucide-react";
-import { ChangeTheme } from "@/components/change-theme";
+import dynamic from "next/dynamic";
+
+const ChangeTheme = dynamic(
+  () => import("@/components/change-theme").then((mod) => mod.ChangeTheme),
+  {
+    ssr: false,
+  }
+);
 
 type Link = {
   name: string;
@@ -43,7 +50,7 @@ export default function Sidebar() {
       initial={{ filter: "blur(5px)" }}
       animate={{ filter: "blur(0px)" }}
       transition={{ duration: 0.3 }}
-      className="h-full min-w-50 px-5 pt-36 hidden md:block relative"
+      className="h-screen px-5 pt-36 hidden md:block sticky top-0 w-[200px]"
     >
       <div className="flex flex-col gap-2">
         <Zap className="w-4 h-4 fill-primary" />
@@ -63,7 +70,7 @@ export default function Sidebar() {
         ))}
       </div>
 
-      <hr className="my-3 border-1 max-w-20 flex-0" />
+      <hr className="my-3 border-1 border-dashed max-w-20 flex-0" />
 
       <div className="flex flex-col gap-2">
         {additionalLinks.map((link) => (

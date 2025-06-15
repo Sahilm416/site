@@ -1,6 +1,5 @@
 "use client";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -31,7 +30,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "Twitter",
-    href: "https://twitter.com/sahil_501",
+    href: "https://twitter.com/sahil__501",
     icon: "twitter",
   },
   {
@@ -42,10 +41,7 @@ const socialLinks: SocialLink[] = [
 ];
 export default function Profile() {
   return (
-    <motion.div
-      initial={{ filter: "blur(5px)", opacity: 0 }}
-      animate={{ filter: "blur(0px)", opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <div
     >
       <div className="flex flex-col md:flex-row gap-5">
         <Image
@@ -83,6 +79,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
