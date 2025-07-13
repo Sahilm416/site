@@ -21,7 +21,7 @@ export default function Menu() {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-5">
           {mainLinks.map((link) => (
-            <DropdownMenuItem key={link.name}>
+            <DropdownMenuItem asChild key={link.name}>
               <Link href={link.href}>{link.name}</Link>
             </DropdownMenuItem>
           ))}
