@@ -17,7 +17,7 @@ type Link = {
   href: string;
 };
 
-const mainLinks: Link[] = [
+export const mainLinks: Link[] = [
   {
     name: "Home",
     href: "/",

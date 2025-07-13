@@ -74,7 +74,7 @@ export default function WorkThread() {
               <p className="text-sm">{item.description}</p>
               <p className="text-sm text-muted-foreground">{item.period}</p>
             </div>
-            <ul className="mt-2 list-disc list-inside text-sm text-muted-foreground">
+            <ul className="mt-2 list-disc ml-4 text-sm text-muted-foreground">
               {item.details.map((detail, index) => (
                 <li key={index}>{detail}</li>
               ))}
