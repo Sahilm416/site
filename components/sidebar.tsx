@@ -53,7 +53,7 @@ export default function Sidebar() {
       className="h-screen px-5 pt-36 hidden md:block sticky top-0 w-[200px]"
     >
       <div className="flex flex-col gap-2">
-        <Zap className="w-4 h-4 fill-primary" />
+        <Zap className="w-4 h-4 fill-sky-500 text-sky-500" />
         {mainLinks.map((link) => (
           <Link
             prefetch

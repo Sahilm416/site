@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
 
 export default function Menu() {
   return (
-    <div className="fixed bottom-0 right-0 w-full flex justify-end p-5 sm:hidden">
+    <div className="fixed top-0 right-0 flex justify-end p-5 sm:hidden">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button className="bg-background border" variant="ghost" size="icon">
@@ -21,7 +21,7 @@ export default function Menu() {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-5">
           {mainLinks.map((link) => (
-            <DropdownMenuItem key={link.name}>
+            <DropdownMenuItem key={link.name} asChild>
               <Link href={link.href}>{link.name}</Link>
             </DropdownMenuItem>
           ))}

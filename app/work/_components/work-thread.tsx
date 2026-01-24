@@ -57,7 +57,7 @@ export default function WorkThread() {
             key={item.id}
           >
             <Plus
-              className={`absolute -left-3 -top-3 w-6 h-6 rounded-full border`}
+              className={`absolute inset-0 -left-[11px] -top-[13px] w-6 h-6 rounded-full border`}
             />
             <div className="flex items-center gap-2">
               <div className="bg-black p-1 rounded-md">
