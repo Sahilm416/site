@@ -42,7 +42,7 @@ export default function RootLayout({
         >
           <div className="flex w-full min-h-[100dvh] max-w-6xl mx-auto relative">
             <Sidebar />
-            <div className="flex-1 p-5 md:pt-36 overflow-auto">{children}</div>
+            <div className="flex-1 p-5 pb-24 md:pt-36 md:pb-5 overflow-auto">{children}</div>
             <Aside />
             <Menu />
           </div>

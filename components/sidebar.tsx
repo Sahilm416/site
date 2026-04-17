@@ -36,7 +36,7 @@ export const mainLinks: Link[] = [
   },
 ];
 
-const additionalLinks: Link[] = [
+export const additionalLinks: Link[] = [
   {
     name: "Gallery",
     href: "/gallery",
@@ -63,9 +63,11 @@ export default function Sidebar() {
               pathname === link.href
                 ? "text-primary"
                 : "text-muted-foreground/70 hover:text-primary transition-all duration-300"
-            } font-medium`}
+            } font-medium group`}
           >
-            {link.name}
+            <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-sky-500 group-hover:after:w-full after:transition-all after:duration-300">
+              {link.name}
+            </span>
           </Link>
         ))}
       </div>
@@ -82,9 +84,11 @@ export default function Sidebar() {
               pathname === link.href
                 ? "text-primary"
                 : "text-muted-foreground/70 hover:text-primary transition-all duration-300"
-            } font-medium`}
+            } font-medium group`}
           >
-            {link.name}
+            <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-sky-500 group-hover:after:w-full after:transition-all after:duration-300">
+              {link.name}
+            </span>
           </Link>
         ))}
       </div>
