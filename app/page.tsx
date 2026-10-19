@@ -1,18 +1,37 @@
-"use client";
 import Profile from "@/components/home/profile";
-import Interest from "@/components/home/interest";
-import { motion } from "framer-motion";
+import Building from "@/components/home/building";
+import { siteDescription, siteName, siteUrl } from "@/lib/site";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteName,
+  url: siteUrl,
+  image: "https://github.com/sahilm416.png",
+  description: siteDescription,
+  jobTitle: "Founding Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Sourcicle",
+    url: "https://www.sourcicle.com/",
+  },
+  sameAs: [
+    "https://github.com/sahilm416",
+    "https://www.linkedin.com/in/sahil-mulani501/",
+    "https://twitter.com/sahil__501",
+  ],
+};
+
 export default function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0, filter: "blur(10px)" }}
-      animate={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.7 }}
-      className="flex flex-col gap-5"
-    >
+    <div className="flex flex-col gap-5">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <Profile />
       <span className="border-dashed border-b-2" />
-      <Interest />
-    </motion.div>
+      <Building />
+    </div>
   );
 }

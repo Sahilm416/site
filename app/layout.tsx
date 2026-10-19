@@ -5,6 +5,7 @@ import Sidebar from "@/components/sidebar";
 import Aside from "@/components/aside";
 import { ThemeProvider } from "@/components/theme-provider";
 import Menu from "@/components/menu";
+import { siteDescription, siteName, siteUrl } from "@/lib/site";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
@@ -19,8 +20,31 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sahil",
-  description: "Portfolio",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName,
+    title: siteName,
+    description: siteDescription,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: siteDescription,
+    creator: "@sahil__501",
+  },
 };
 
 export default function RootLayout({

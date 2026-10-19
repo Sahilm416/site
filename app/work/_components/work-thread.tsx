@@ -9,7 +9,7 @@ const work = [
     name: "Sourcicle",
     logo: sourcicleLogo,
     description: "Founding Engineer",
-    period: "June 2024 – Present",
+    period: "June 2025 – Present",
     details: [
       "Leading technical architecture and development of core product features",
       "Building and scaling infrastructure to support growing user base",

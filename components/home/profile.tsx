@@ -52,10 +52,22 @@ export default function Profile() {
           className="rounded-sm w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] bg-muted"
         />
         <div className="flex flex-col gap-3">
-          <h1 className="md:text-4xl text-2xl font-semibold">Sahil Mulani</h1>
+          <div className="flex flex-col gap-1">
+            <h1 className="md:text-4xl text-2xl font-semibold">Sahil Mulani</h1>
+            <p className="text-sm font-mono text-muted-foreground/70">
+              Founding Engineer @{" "}
+              <a
+                href="https://www.sourcicle.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-dashed underline-offset-4 hover:text-primary hover:decoration-solid"
+              >
+                Sourcicle
+              </a>
+            </p>
+          </div>
           <p className="text-muted-foreground">
-            Hey there, I&apos;m a software engineer with a passion for building
-            minimalistic and efficient AI applications.
+            I&apos;m a software engineer who ships products end to end.
           </p>
           <div className="flex gap-3">
             {socialLinks.map((socialLink) => {

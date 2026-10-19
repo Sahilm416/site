@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { mainLinks, additionalLinks } from "@/components/sidebar";
@@ -16,11 +15,8 @@ export default function Menu() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <motion.nav
-      initial={{ filter: "blur(5px)", opacity: 0, y: 10 }}
-      animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-0.5 rounded-full border bg-background/70 backdrop-blur-md px-1.5 py-1 shadow-sm"
+    <nav
+      className="animate-in fade-in slide-in-from-bottom-2 duration-300 motion-reduce:animate-none md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-0.5 rounded-full border bg-background/70 backdrop-blur-md px-1.5 py-1 shadow-sm"
     >
       {links.map((link) => {
         const active = pathname === link.href;
@@ -54,6 +50,6 @@ export default function Menu() {
             <Moon className="w-3.5 h-3.5" />
           ))}
       </button>
-    </motion.nav>
+    </nav>
   );
 }

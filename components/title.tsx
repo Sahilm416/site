@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 export const Title = ({
   name,
   description,
@@ -8,14 +6,9 @@ export const Title = ({
   description?: string;
 }) => {
   return (
-    <motion.div
-      initial={{ filter: "blur(5px)", opacity: 0 }}
-      animate={{ filter: "blur(0px)", opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col gap-2"
-    >
+    <div className="flex flex-col gap-2">
       <h1 className="text-4xl font-semibold">{name}</h1>
       <p className="text-muted-foreground/70">{description}</p>
-    </motion.div>
+    </div>
   );
 };

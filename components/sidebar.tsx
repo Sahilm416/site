@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
-import { Zap } from "lucide-react";
 import dynamic from "next/dynamic";
 
 const ChangeTheme = dynamic(
@@ -46,14 +44,8 @@ export const additionalLinks: Link[] = [
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-    <motion.div
-      initial={{ filter: "blur(5px)" }}
-      animate={{ filter: "blur(0px)" }}
-      transition={{ duration: 0.3 }}
-      className="h-screen px-5 pt-36 hidden md:block sticky top-0 w-[200px]"
-    >
+    <div className="h-screen px-5 pt-36 hidden md:block sticky top-0 w-[200px] animate-in fade-in duration-300 motion-reduce:animate-none">
       <div className="flex flex-col gap-2">
-        <Zap className="w-4 h-4 fill-sky-500 text-sky-500" />
         {mainLinks.map((link) => (
           <Link
             prefetch
@@ -95,6 +87,6 @@ export default function Sidebar() {
       <div className="mt-auto absolute bottom-0 left-0 py-5">
         <ChangeTheme />
       </div>
-    </motion.div>
+    </div>
   );
 }
