@@ -22,7 +22,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: siteName,
+    default: `${siteName} | Software Engineer`,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName,
-    title: siteName,
+    title: `${siteName} | Software Engineer`,
     description: siteDescription,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: siteName,
+    title: `${siteName} | Software Engineer`,
     description: siteDescription,
     creator: "@sahil__501",
   },

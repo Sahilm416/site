@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
+  async redirects() {
+    return [
       {
-        hostname: "github.com",
+        source: "/:path*",
+        has: [{ type: "host", value: "sahilm416.vercel.app" }],
+        destination: "https://www.sahilmulani.com/:path*",
+        permanent: true,
       },
-    ],
+    ];
   },
 };
 

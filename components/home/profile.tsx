@@ -45,8 +45,9 @@ export default function Profile() {
     >
       <div className="flex flex-col md:flex-row gap-5">
         <Image
-          src="https://github.com/sahilm416.png"
-          alt="Profile"
+          src="/sahil-mulani.jpg"
+          alt="Sahil Mulani"
+          preload
           width={150}
           height={150}
           className="rounded-sm w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] bg-muted"

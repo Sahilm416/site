@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://sahilm416.vercel.app";
+export const siteUrl = "https://www.sahilmulani.com";
 export const siteName = "Sahil Mulani";
 export const siteDescription =
   "Sahil Mulani is a software engineer who ships products end to end. Founding Engineer at Sourcicle.";

@@ -4,21 +4,51 @@ import { siteDescription, siteName, siteUrl } from "@/lib/site";
 
 const personJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteName,
-  url: siteUrl,
-  image: "https://github.com/sahilm416.png",
-  description: siteDescription,
-  jobTitle: "Founding Engineer",
-  worksFor: {
-    "@type": "Organization",
-    name: "Sourcicle",
-    url: "https://www.sourcicle.com/",
-  },
-  sameAs: [
-    "https://github.com/sahilm416",
-    "https://www.linkedin.com/in/sahil-mulani501/",
-    "https://twitter.com/sahil__501",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profilepage`,
+      url: siteUrl,
+      name: `${siteName} | Software Engineer`,
+      mainEntity: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      publisher: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: siteName,
+      alternateName: ["Sahil", "sahilm416"],
+      url: siteUrl,
+      image: `${siteUrl}/sahil-mulani.jpg`,
+      description: siteDescription,
+      jobTitle: "Founding Engineer",
+      worksFor: {
+        "@type": "Organization",
+        name: "Sourcicle",
+        url: "https://www.sourcicle.com/",
+      },
+      knowsAbout: [
+        "Software Engineering",
+        "Web Development",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "AI Agents",
+        "Chrome Extensions",
+      ],
+      sameAs: [
+        "https://github.com/sahilm416",
+        "https://www.linkedin.com/in/sahil-mulani501/",
+        "https://twitter.com/sahil__501",
+        "https://x.com/sahil__501",
+      ],
+    },
   ],
 };
 

@@ -32,7 +32,7 @@ export default function OpengraphImage() {
           </div>
         </div>
         <div style={{ fontSize: 28, color: "#71717a" }}>
-          sahilm416.vercel.app
+          sahilmulani.com
         </div>
       </div>
     ),
